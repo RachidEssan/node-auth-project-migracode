@@ -1,0 +1,55 @@
+* {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.header {
+  margin-bottom: 6em;
+}
+
+.logo {
+  height: 9em;
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin: 0em 0em 0.2em 0em;
+  text-align: left;
+  color: black;
+  background-color: white;
+  border-radius: 0.3em;
+}
+
+.mainButton {
+  font-size: 2em;
+  margin: 0em 0.5em 0em 0.5em;
+  background-color: white;
+  color: black;
+  width: 5em;
+  cursor: pointer;
+  border-radius: 0.2em;
+}
+
+.submitButton {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
