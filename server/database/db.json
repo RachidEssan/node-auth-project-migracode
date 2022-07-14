@@ -1,0 +1,26 @@
+[{
+    "id": 0,
+    "name": "Rachid",
+    "email": "rachid@gmail.com",
+    "password": "$2b$10$bJvOB3e/iWfhvGZTmjFaZ.aQ7SPU6ve95K6qBZUvNxLmcXou.72zC"
+}, {
+    "id": 1,
+    "name": "Oussama",
+    "email": "oussama@gmail.com",
+    "password": "$2b$10$UmxY0NlTrceQq10UiSP9nOTF3l/Cmh8iMD2R6nW5LBG2lO6yccZpm"
+}, {
+    "id": 2,
+    "name": "Yvan",
+    "email": "yvan@gmail.com",
+    "password": "$2b$10$R2iytpNL4kXA7..wTdj0He9j30dr5/L/j3VAsOpB.Wic9keFMB.g."
+}, {
+    "id": 3,
+    "name": "Rachid",
+    "email": "rachid-essantouh@hotmail.com",
+    "password": "$2b$10$1pVZg27IkPw8Yx40pdciteSg5OwnJf0Y7zsqEm5ujKsQtK9NsuVcG"
+}, {
+    "id": 5,
+    "name": "Laurie",
+    "email": "laurie261298@hotmail.fr",
+    "password": "$2b$10$mNV2aFOvOC7Zp9p/4Lz.5OGAcGmvyNxbqG3R9cKM0J0DC5zW8uP3C"
+}]

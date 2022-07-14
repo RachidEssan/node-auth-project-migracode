@@ -17,17 +17,15 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));  // enable CORS
 
-app.use(express.static(path.join(__dirname, 'reactapp/build')));
-
-
 // simple route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'reactapp/build', 'index.html'));
+  res.json({ message: "Welcome to Identi.fy" });
 });
+
 app.use("/user", user);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });

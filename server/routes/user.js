@@ -16,7 +16,7 @@ router.post("/sign-up", async (req, res) => {
     const user = await usersDb.filter(user => user.email === email);
 
     if (user.length > 0) {
-      return res.status(400).redirect('/user/sign-up/400');
+      return res.status(400).json({error: "User already exist!"});
     }
 
     console.log(req.body)
@@ -47,7 +47,7 @@ router.post("/sign-up", async (req, res) => {
     
     const jwtToken = generateJWT(newUser.id);
 
-    return res.status(201).redirect('/user/sign-up/201');
+    return res.status(201).send({ jwtToken: jwtToken, isAuthenticated: true});
 
   } catch (error) {
     console.error(error.message);
@@ -63,7 +63,7 @@ router.post("/sign-in", async (req, res) => {
     const user = await usersDb.filter(user => user.email === email);
 
     if (user.length === 0) {
-      return res.status(401).redirect("/user/sign-in/401");
+      return res.status(401).json({error: "Invalid Credential", isAuthenticated: false});
     }
 
 
@@ -74,14 +74,14 @@ router.post("/sign-in", async (req, res) => {
     );
 
     if (!isValidPassword) {
-      return res.status(401).redirect("/user/sign-in/401");
+      return res.status(401).json({error: "Invalid Credential", isAuthenticated: false});
     }
 
     
     // if the password matches with hashed password then we generate a new token and send it back to user
     const jwtToken = generateJWT(user[0].id);
 
-    return res.status(200).redirect("/user/sign-in/200");
+    return res.status(200).send({ jwtToken, isAuthenticated: true });
 
   } catch (error) {
     console.error(error.message);

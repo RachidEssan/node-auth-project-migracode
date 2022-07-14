@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './routes/Home'
@@ -16,15 +16,15 @@ function App() {
       <div className="App">
         <Header />      
         <div className="content">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/user/sign-in" component={SignIn} />
-            <Route exact path="/user/sign-in/200" component={SignInSuccess} />
-            <Route exact path="/user/sign-in/401" component={SignInFail} />
-            <Route exact path="/user/sign-up" component={SignUp} />
-            <Route exact path="/user/sign-up/201" component={SignUpSuccess} />
-            <Route exact path="/user/sign-up/400" component={SignUpFail} />
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/user/sign-in" element={<SignIn />} />
+            <Route exact path="/user/sign-in/success" element={<SignInSuccess />} />
+            <Route exact path="/user/sign-in/fail" element={<SignInFail />} />
+            <Route exact path="/user/sign-up" element={<SignUp />} />
+            <Route exact path="/user/sign-up/success" element={<SignUpSuccess />} />
+            <Route exact path="/user/sign-up/fail" element={<SignUpFail />} />
+          </Routes>
         </div>
       </div>
     </Router>
